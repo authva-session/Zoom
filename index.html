@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Communication Session</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #1a1a1a;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            padding: 15px;
+            background-color: #add8e6;
+            border-bottom: 1px solid #c4e3ed;
+            text-align: center;
+        }
+        h2 {
+            color: #1a1a1a;
+            margin: 0;
+        }
+        h3, h4 {
+            color: #add8e6; 
+            margin: 0 0 10px 0;
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            gap: 20px;
+        }
+        .video-section {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .video-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .video-feed {
+            background-color: #000000;
+            border: 2px solid #3d3d3d;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        /* Mock controls bar underneath video grid */
+        .controls-bar {
+            background-color: #2d2d2d;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .mock-btn {
+            background-color: #3d3d3d;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: default;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #2d2d2d;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .status-box {
+            background-color: #3d3d3d;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .control-btn {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .control-btn:hover {
+            background-color: #005a9e;
+        }
+        /* Changed footer background to light blue and text to dark */
+        .footer {
+            padding: 12px;
+            background-color: #add8e6;
+            border-top: 1px solid #c4e3ed;
+            text-align: center;
+        }
+        .footer p {
+            color: #1a1a1a;
+            margin: 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>Active Conference Room</h2>
+    </div>
+
+    <div class="main-container">
+        <div class="video-section">
+            <div class="video-grid">
+                <div class="video-feed">Host Camera (Streaming)</div>
+                <div class="video-feed">Participant 1 (No Video)</div>
+                <div class="video-feed">Participant 2 (Streaming)</div>
+                <div class="video-feed">Your Video Placeholder</div>
+            </div>
+            <!-- Mock Action Toggles -->
+            <div class="controls-bar">
+                <button class="mock-btn">Mute Audio</button>
+                <button class="mock-btn">Stop Camera</button>
+                <button class="mock-btn">Share Screen</button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div>
+                <h3>Session Details</h3>
+                <p>Status: Synchronizing...</p>
+                <div class="status-box">
+                    <p>Standard WebRTC audio/video configurations require media permissions to be initialized natively within the browser window.</p>
+                </div>
+            </div>
+            
+            <div>
+                <a href="https://drive.google.com/file/d/1e7jw_eiWyJhf7SjozFK3yuJIFenptitx/view?usp=sharing" class="control-btn">Enter Audio Lobby</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Secured Session Connection Hub</p>
+    </div>
+
+</body>
+</html>
